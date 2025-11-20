@@ -17,14 +17,14 @@ Fixed::Fixed(const float f) {
     x = roundf(f * (1 << y));
 }
 
-Fixed::Fixed(const Fixed &obj) {
+Fixed::Fixed(const Fixed &nw) {
     std::cout << "Copy constructor called\n";
-    *this = obj;
+    *this = nw;
 }
 
-Fixed &Fixed::operator=(const Fixed &other) {
+Fixed &Fixed::operator=(const Fixed &oj) {
     std::cout << "Copy assignment operator called\n";
-    this->x = other.x;
+    this->x = oj.x;
     return *this;
 }
 
@@ -42,4 +42,9 @@ float Fixed::toFloat(void) const {
 
 int Fixed::toInt(void) const {
     return x >> y;
+}
+
+std::ostream& operator<<(std::ostream &outpt, const Fixed &fix)
+{
+    return  outpt << fix.toFloat();
 }

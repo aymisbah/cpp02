@@ -3,7 +3,7 @@ SRC     =   main.cpp \
 
 NAME     =    Fixed
 CC         =    c++
-CFLAGS     =  -std=c++98       #-Wall -Wextra -Werror
+CFLAGS     =       -Wall -Wextra -Werror -std=c++98
 OBJ     =     ${SRC:.cpp=.o}
 HEADER = Fixed.hpp
 all: ${NAME}

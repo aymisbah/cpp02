@@ -13,11 +13,11 @@ class Fixed
         static const int y;
     public :
         Fixed();
-        Fixed(const Fixed &obj);
-        Fixed& operator=(const Fixed &e);
+        Fixed(const Fixed &new_o);
+        Fixed& operator=(const Fixed &nw);
         ~Fixed();
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
+        int getRawBits( void ) const;
+        void setRawBits( int const raw );
 };
 
 
